@@ -28,6 +28,7 @@ require("./messageCommands.js")
 require("./slashCommands.js")
 require("./webserver.js")
 require("./events.js")
+require("./utils.js")
 console.log(`PID: ${process.pid}`)
 process.traceDeprecation = true
 bot.login(process.env.token)
