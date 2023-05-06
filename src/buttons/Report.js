@@ -1,8 +1,8 @@
 const { EmbedBuilder } = require("discord.js")
-const { Bot, Default } = require("../../config.json")
+const { BotConfig, Default } = require("../../config.json")
 module.exports = async ({ bot, interactionCreate }) => {
 	const embed = new EmbedBuilder()
-	embed.setURL(Bot.BotSite)
+	embed.setURL(BotConfig.BotSite)
 	embed.setTitle("Report errors here!")
 	embed.setDescription("Contact the creator directly: \nPENDRAGON#8785\n@pendragonscode")
 	embed.setColor(Default.DefaultEmbedColor)
