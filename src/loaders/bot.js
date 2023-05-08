@@ -24,6 +24,7 @@ global.bot = new Client({
 	]
 })
 require("./database.js")
+require("../functions/currentDate.js")
 require("./messageCommands.js")
 require("./slashCommands.js")
 require("./webserver.js")
