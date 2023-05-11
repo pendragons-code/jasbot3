@@ -15,3 +15,7 @@ Essentially this bot is in-dev.
 in-dev => in development, completely dysfunctional like me
 release => basically LTS and prod
 ```
+
+# Project Description:
+
+A basic discord bot made for basic utility and moderation. It has support for some cool APIs and that is pretty much it. A really basic bot with a slow progress rate because I am in school again :(.
