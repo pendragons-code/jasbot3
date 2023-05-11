@@ -23,9 +23,9 @@ app.use(helmet())
 app.use(function(req, res) {
 	res.render("404.ejs")
 })
-server.listen((port, async () => {
+server.listen((port), async () => {
 	console.log(`[Webserver]: Webserver up! http://localhost:${port}`)
-}))
+})
 
 module.exports = { server }
 // exporting this and not making this global because the chances of someone naming a discord.js-related variable server is very high, while it is bad practice on that person's end, im just taking steps to avoid it.
