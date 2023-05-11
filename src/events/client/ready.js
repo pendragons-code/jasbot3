@@ -8,6 +8,7 @@ module.exports = async (bot) => {
 	})
 	if(editmode === "on") bot.user.setActivty("Editmode is on!")
 	bot.user.setActivity("Use 'jas help' for commands!")
+	console.log(`\n\n List of guilds with bot!`)
 	bot.guilds.cache.map(guild => {
 		console.log(guild.name)
 		console.log(guild.id)

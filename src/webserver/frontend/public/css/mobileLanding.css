@@ -1,0 +1,63 @@
+#what items {
+	display: block;
+	padding: 1rem;
+}
+
+#what .items .item {
+	margin-right: 1.3rem;
+	align-self: center;
+	margin-bottom: 0;
+}
+
+
+.l-heading {
+	font-size: 1rem;
+}
+@media(max-width: 500px) {
+	#navbar {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#navbar ul {
+		padding: 0.5rem;
+	}
+
+	#showcase .showcase-content {
+		margin-top: -6.80rem;
+		top: 110px;
+	}
+	#showcase .showcase-content .l-heading {
+		font-size: 1rem;
+	}
+	#showcase .showcase-content .l-heading:hover {
+		font-size: 1.5rem;
+	}
+	#weather {
+		height: 40vh;
+	}
+	#who .who-img {
+		display: none;
+	}
+}
+
+@media all and (orientation:landscape) {
+	#who {
+		height: 90vh
+	}
+	#weather {
+		height: 65vh
+	}
+
+	#showcase .showcase-content {
+		margin-top: -6.85rem;
+		top: 110px;
+	}
+
+	.lead {
+		font-size: 1rem;
+	}
+	#who .who-img {
+		display: none;
+	}
+}

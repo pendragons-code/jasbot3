@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 if(!port) console.log("Port is empty and will be assumed to be 3000!")
 
-app.use(function(rea, res, next) {
+app.use(function(req, res, next) {
 	res.setHeader("Content-Security-Policy", "frame-ancestors 'self';")
 	next()
 })
@@ -24,7 +24,7 @@ app.use(function(req, res) {
 	res.render("404.ejs")
 })
 server.listen((port, async () => {
-	console.log(`Webserver up!`)
+	console.log(`[Webserver]: Webserver up! http://localhost:${port}`)
 }))
 
 module.exports = { server }

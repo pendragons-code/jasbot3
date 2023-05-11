@@ -1,7 +1,7 @@
 const { readdirSync } = require("fs")
 console.log("[Events]: Started loading!")
 const EventDirs = readdirSync("./src/events").filter(dirs => dirs)
-for(file of EventDirs) {
+for(dirs of EventDirs) {
 	const perEventFile = readdirSync(`./src/events/${dirs}`).filter(file => file.endsWith(".js"))
 	for(file of perEventFile) {
 		const event = require(`../events/${dirs}/${file}`)

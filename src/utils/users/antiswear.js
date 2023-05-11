@@ -1,7 +1,7 @@
 const { Default } = require("../../../config.json")
 module.exports = {
 	name: "antiswear",
-	async execute(messageCreate, args) {
+	async execute(messageCreate) {
 		let guildAntiSwearSettings = await db.get(`antiswear_${messageCreate.guild.id}`)
 		let guildAntiSwearExcludedChannels = await db.get(`antiswearExcludedChannels_${messageCreate.guild.id}`) // expect this to be an array, check if the channel is in the array;
 		let bannedWords = await db.get(`bannedWords_${messageCreate.guild.id}`)
