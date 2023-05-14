@@ -15,7 +15,6 @@ module.exports = async (bot, messageCreate) => {
 	// made it separate so it is easier to mod and can be called by other events!
 	if(dbPrefix === null) dbPrefix = Default.DefaultPrefix
 	let prefix = messageCreate.content.includes(dbPrefix) ? dbPrefix : `<@${BotConfig.BotID}>`	
-	global.prefix = prefix
 	if(messageCreate.content.indexOf(prefix) !== 0) return
 	if(BlackListedUser === "yes") return messageCreate.channel.send(reject.UserFault.privilege.BlackListedUser)
 	if(editMode == "on" && messageCreate.author.id !== BotConfig.BotOwnerID) return messageCreate.channel.send(reject.BotDownTime.editMode)
@@ -44,7 +43,7 @@ module.exports = async (bot, messageCreate) => {
 		if(args[0] === "-h") return messageCreate.channel.send(cmd.utilisation)
 		if(newUser !== "SendNewUserMessage") bot.utils.get("newuser").execute(messageCreate, args)
 		if(cmd.category === "creator" && messageCreate.author.id !== BotConfig.BotOwnerID) return messageCreate.channel.send(reject.UserFault.privilege.CreatorOnly)
-		cmd.execute(messageCreate, args)
+		cmd.execute(messageCreate, args, prefix)
 		await db.add(`cmdsRan_${messageCreate.author.id}`, 1)
 	} catch(errorInMessageCreate) {
 		console.error(errorInMessageCreate)
