@@ -1,4 +1,5 @@
 const { Default } = require("../../../config.json")
+const { defaultFormatCurrentTime } = require("../../functions/currentDate.js")
 module.exports = {
 	name: "antiswear",
 	async execute(messageCreate) {
