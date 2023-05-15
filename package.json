@@ -1,6 +1,6 @@
 {
  	"name": "jasbot3",
- 	"version": "1.0.0",
+ 	"version": "3.0.0 - indev",
  	"description": "",
  	"main": "./src/loaders/bot.js",
  	"scripts": {
@@ -8,7 +8,7 @@
  	 	"deploy": "nodemon ./src/loaders/bot.js --max-old-space-size=1024 > logfile 2>> errfile"
  	},
  	"keywords": [],
- 	"author": "",
+ 	"author": "Pendragon's code",
  	"license": "ISC",
  	"dependencies": {
  	 	"axios": "^1.4.0",
