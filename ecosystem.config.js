@@ -9,6 +9,9 @@ module.exports = {
 			NODE_ENV: "development"
 		},
 		watch_delay: 1000,
-		ignore_watch: ["node_modules"]
+		ignore_watch: ["node_modules"],
+		max_memory_restart: "3G",
+		out_file: "./logfile.txt",
+		error_file: "./errorfile.txt"
 	}]
 }

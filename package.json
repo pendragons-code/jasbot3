@@ -5,7 +5,7 @@
  	"main": "./src/loaders/bot.js",
  	"scripts": {
  	 	"update": "npm update",
- 	 	"deploy": "pm2 start ./src/loaders/bot.js --watch --max-memory-restart 3G --log ./logfile.txt --error ./errfile.txt"
+ 	 	"deploy": "pm2 start ecosystem.config.js"
  	},
  	"keywords": [],
  	"author": "Pendragon's code",
@@ -13,6 +13,7 @@
  	"dependencies": {
  	 	"axios": "^1.4.0",
  	 	"better-sqlite3": "^8.3.0",
+ 	 	"console-stamp": "^3.1.1",
  	 	"discord.js": "^14.9.0",
  	 	"dotenv": "^16.0.3",
  	 	"ejs": "^3.1.9",
