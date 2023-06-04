@@ -5,7 +5,7 @@
  	"main": "./src/loaders/bot.js",
  	"scripts": {
  	 	"update": "npm update",
- 	 	"deploy": "nodemon ./src/loaders/bot.js --max-old-space-size=1024 > logfile 2>> errfile"
+ 	 	"deploy": "pm2 start ./src/loaders/bot.js --watch --max-memory-restart 3G --log ./logfile.txt --error ./errfile.txt"
  	},
  	"keywords": [],
  	"author": "Pendragon's code",

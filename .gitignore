@@ -2,3 +2,5 @@ node_modules
 test.js
 .env
 venv
+.env.production
+.env.development
