@@ -5,7 +5,7 @@ module.exports = {
 		env_production: {
 			NODE_ENV: "production"
 		},
-		end_development: {
+		env_development: {
 			NODE_ENV: "development"
 		},
 		watch_delay: 1000,
