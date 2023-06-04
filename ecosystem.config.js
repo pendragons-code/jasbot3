@@ -7,6 +7,8 @@ module.exports = {
 		},
 		end_development: {
 			NODE_ENV: "development"
-		}
+		},
+		watch_delay: 1000,
+		ignore_watch: ["node_modules"]
 	}]
 }
