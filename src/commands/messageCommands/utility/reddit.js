@@ -23,6 +23,6 @@ module.exports = {
 		redditEmbed.setFooter({ text: Default.DefaultFooterText })
 		redditEmbed.setTimestamp()
 		if(sfwPost.url)redditEmbed.setImage(sfwPost.url)
-		messageCreate.channel.send({ embeds: [redditEmbed] })
+		return messageCreate.channel.send({ embeds: [redditEmbed] })
 	}
 }
