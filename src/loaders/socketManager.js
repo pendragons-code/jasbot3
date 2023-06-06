@@ -3,7 +3,7 @@ const { readdirSync } = require("fs")
 const socket = require("socket.io")
 const io = socket(server)
 
-const loadSocketDirs = readdirSync("./src/webserver/socketEvents").filter(dirs => dirs)
+const loadSocketDirs = readdirSync("./src/webserver/socketEvents")
 io.on("connection", (socket) => {
 	for(dirs of loadSocketDirs) {
 		const loadSocketFile = readdirSync(`./src/webserver/socketEvents`).filter(files => files.endsWith(".js"))

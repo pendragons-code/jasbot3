@@ -2,7 +2,7 @@ const { Collection } = require("discord.js")
 const { readdirSync } = require("fs")
 console.log("[utils]: Starting loading!")
 bot.utils = new Collection()
-let utilDirs = readdirSync("./src/utils").filter(dirs => dirs)
+let utilDirs = readdirSync("./src/utils")
 // I for some reason thought that this was a promise, i forgot that I'm not using promise fs like an older project. bad habits die hard
 for(dirs of utilDirs) {
 	const perUtilFile = readdirSync(`./src/utils/${dirs}`).filter(file => file.endsWith(".js"))

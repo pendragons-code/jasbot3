@@ -3,7 +3,7 @@ const { readdirSync } = require("fs")
 console.log("[slashCommands]: Starting loading!")
 bot.slashCommands = new Collection()
 CommandsArray = []
-let slashCommandDirs = readdirSync("./src/commands/slashCommands").filter(dirs => dirs)
+let slashCommandDirs = readdirSync("./src/commands/slashCommands")
 for(dirs of slashCommandDirs) {
 	const perSlashCommandFile = readdirSync(`./src/commands/slashCommands/${dirs}/`).filter(file => file.endsWith(".js"))
 	for(file of perSlashCommandFile) {
