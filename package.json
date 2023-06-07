@@ -5,7 +5,7 @@
  	"main": "./src/loaders/bot.js",
  	"scripts": {
  	 	"update": "npm update",
- 	 	"deploy": "pm2 start ecosystem.config.js"
+ 	 	"deploy": "pm2 start ecosystem.config.js --env production"
  	},
  	"keywords": [],
  	"author": "Pendragon's code",
