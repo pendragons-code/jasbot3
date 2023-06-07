@@ -1,8 +1,10 @@
 const express = require("express")
 const helmet = require("helmet")
-const env = require("dotenv").config()
 const { join } = require("path")
 const app = express()
+
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
+
 const port = process.env.port || 3000
 const frontEnd = require("./frontEnd.js")
 const http = require("http")

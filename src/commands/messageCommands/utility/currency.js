@@ -1,4 +1,4 @@
-require("dotenv").config()
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 const { EmbedBuilder } = require("discord.js")
 const { Default, BotConfig } = require("../../../../config.json")
 const axios = require("axios")

@@ -2,7 +2,7 @@ const { Default } = require("../../../../config.json")
 const { EmbedBuilder } = require("discord.js")
 const axios = require("axios")
 const reject = require("../../../../assets/responseComponents/rejection.json")
-require("dotenv").config()
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 const tenorKey = process.env.TenorKey
 

@@ -1,5 +1,5 @@
 const { Default, BotConfig } = require("../../../config.json")
-const env = require("dotenv").config()
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 const reject = require("../../../assets/responseComponents/rejection.json")
 const PermissionList = require("../../../assets/responseComponents/permission.json")
 
