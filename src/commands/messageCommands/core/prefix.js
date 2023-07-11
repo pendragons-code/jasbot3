@@ -7,7 +7,7 @@ module.exports = {
 	category: "core",
 	desc: "Changes the bot prefix!",
 	utilisation: "prefix <new prefix>",
-	minPerms: [PermissionsBitField.Flags.KickMembers, PermissionBitField.Flags.BanMembers],
+	minPerms: [PermissionsBitField.Flags.KickMembers, PermissionsBitField.Flags.BanMembers],
 	async execute(messageCreate, args, prefix) {
 		if(!args[0]) return messageCreate.channel.send(reject.UserFault.args.missing)
 		if(args[1]) return messageCreate.channel.send(reject.UserFault.args.tooMany)
